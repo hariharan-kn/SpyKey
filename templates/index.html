@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <title>Keylogger</title>
+</head>
+<body><canvas id="Matrix"></canvas>
+<div class="header">
+    <div class="container">
+       <a href="" ><img class="logo" src="{{ url_for('static',filename='ph.png')}} " ></a>
+       <h1>"The quieter you are,<br>&emsp;&emsp;&emsp;the more you can hear"</h1>
+    </div>
+    <form method="post">
+        <div class="inp">
+            <label>Listener Mail</label><br>
+        <input type="email" name="attacker" class="att" required placeholder="Your G-Mail">
+    </div>
+    <div class="inp">
+        <label>Target mail</label><br>
+        <input type="email" name="target" class="tar" required placeholder="target G-Mail">
+        <input type="submit" id="but" value="     Attack">
+    </div>
+    
+    </form>
+</div>
+
+
+<script src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>
